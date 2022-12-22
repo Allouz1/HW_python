@@ -1,4 +1,4 @@
-# Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+w  # Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 
 # Пример:
 
@@ -7,8 +7,10 @@
 # - 2 -> 10
 
 number = int(input('Введите число: '))
-result = ""
+result = []
+
 while number > 0:
-    result = str(number % 2) + result
+    result.append(str(number % 2))
     number //= 2
-print(result)
+
+print(''.join(result[::-1]))
